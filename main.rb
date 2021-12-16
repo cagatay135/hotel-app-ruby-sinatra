@@ -1,12 +1,13 @@
 require "sinatra"
 require 'sinatra/reloader' if development?
 require 'sqlite3'
+require 'dotenv'
+Dotenv.load
 
 
 @db = SQLite3::Database.open 'test.db'
 @db.execute "CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT , email TEXT , password TEXT)"
 @db.execute "CREATE TABLE IF NOT EXISTS room(id INTEGER PRIMARY KEY AUTOINCREMENT,statu TEXT , fiyat INT , boyut INT , kapasite INT , servisler TEXT , gunler TEXT)"
-
 
 $username=""
 
@@ -151,8 +152,8 @@ message=params['message']
 
 options = { :address              	  => "smtp.gmail.com",
                 :port                 => 587,
-                :user_name            => 'cagatayrubyproject@gmail.com',
-                :password             => 'Qweasd12',
+                :user_name            => 'sample@gmail.com',
+                :password             => 'sample',
                 :authentication       => 'plain',
                 :enable_starttls_auto => true  }
 
