@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sona Template">
+    <meta name="keywords" content="Sona, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cagatay | Hotel</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="canvas-open">
+        <i class="icon_menu"></i>
+    </div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="icon_close"></i>
+        </div>
+        <div class="search-icon  search-switch">
+            <i class="icon_search"></i>
+        </div>
+        <div class="header-configure-area">
+            <div class="language-option">
+                <img src="stylesheets/img/turk.jpg" alt="">
+                <span>EN <i class="fa fa-angle-down"></i></span>
+                <div class="flag-dropdown">
+                    <ul>
+                        <li><a href="#">Zi</a></li>
+                        <li><a href="#">Fr</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="bk-btn">Booking Now</a>
+        </div>
+        <nav class="mainmenu mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./rooms.html">Rooms</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./pages.html">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./room-details.html">Tek Oda</a></li>
+                        <li><a href="#">Aile Odası</a></li>
+                        <li><a href="#">Premium Oda</a></li>
+                        <li><a href="#">Premium Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">News</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="top-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-tripadvisor"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        <ul class="top-widget">
+            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
+            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+        </ul>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="tn-left">
+                            <li><i class="fa fa-phone"></i>(+90) 555 555 5555</li>
+                            <li><i class="fa fa-envelope"></i> cagatay135@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tn-right">
+                            <div class="top-social">
+                                <a href="#"><i class="fa fa-user-circle-o"></i>&nbsp;&nbsp; <%= @username %></a>
+                            </div>
+                            <% if @username.length > 0 %>
+                            <button class="bk-btn" type="submit" onclick="location.href='/login'">Çıkış Yap</button>
+                            <% end %>
+                            <div class="language-option">
+                                <img src="stylesheets/img/turk.jpg" alt="">
+                                <span>TR <i class="fa fa-angle-down"></i></span>
+                                <div class="flag-dropdown">
+                                    <ul>
+                                        <li><a href="#">EN</a></li>
+                                        <li><a href="#">FR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="stylesheets/img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="nav-menu">
+                            <nav class="mainmenu">
+                                <ul>
+                                    <li class="active"><a href="/">ANASAYFA</a></li>
+                                    <li><a href="/room">ODALARIMIZ</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/tek">Tek Oda</a></li>
+                                            <li><a href="/aile">Aile Odası</a></li>
+                                            <li><a href="/premium">Premium Oda</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/about">HAKKIMIZDA</a></li>
+                                    <li><a href="/contact">İLETİŞİM</a></li>
+                                    <li><a href="/register">KAYIT OL</a></li>
+                                    <li><a href="/login">GİRİŞ YAP</a></li>
+                                </ul>
+                            </nav>
+                            <div class="nav-right search-switch">
+                                <i class="icon_search"></i>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                    <h1>Cagatay Hotel</h1>
+                    <p>İnternnete Bulabileceğiniz En İyi Otel Rezervasyon Sitesi , Otel Önerileri Düşük Fiyatlı Oteller ve Daha Fazlası...</p>
+                    <a href="/" class="primary-btn">Şimdi Keşfet</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h3>Odanı Rezerve Et</h3>
+                        <form action="/search" method="post">
+                            <div class="check-date">
+                                <label for="date-in">Giriş Tarihi:</label>
+                                <input type="text" name="giris" class="date-input" id="date-in">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <div class="check-date">
+                                <label for="date-out">Çıkış Tarihi</label>
+                                <input type="text" name="cikis" class="date-input" id="date-out">
+                                <i class="icon_calendar"></i>
+                            </div>
+                            <div class="select-option">
+                                <label for="guest">Kişi Sayısı:</label>
+                                <select id="guest">
+                                    <option value="">1 Yetişkin</option>
+                                    <option value="">2 Yetişkin</option>
+                                    <option value="">3 Yetişkin</option>
+                                </select>
+                            </div>
+                            <div class="select-option">
+                                <label for="room">Room:</label>
+                                <select id="room">
+                                    <option value="">1 Oda</option>
+                                    <option value="">2 Oda</option>
+                                </select>
+                            </div>
+                            <button type="submit">Uygunluğu Kontrol Et</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="stylesheets/img/hero/hero-1.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="stylesheets/img/hero/hero-2.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="stylesheets/img/hero/hero-3.jpg"></div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+   
+
+    <!-- Services Section End -->
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Servislerimiz</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i class="flaticon-033-dinner"></i>
+                        <h4>Yemek Servisleri</h4>
+                        <p>Gün Boyu Açık Büfemizle Sizlere Hizmet Vermekteyiz...</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i class="flaticon-024-towel"></i>
+                        <h4>Çamaşır Yıkama</h4>
+                        <p>Gün Boyu Size Hizmet Veren Çamaşır Makinelerimiz...</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i class="flaticon-044-clock-1"></i>
+                        <h4>Otopark</h4>
+                        <p>Ücretsiz Vale ve Otopark Hizmetiyle Araçınız Bizimle Her An Güvende...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Home Room Section Begin -->
+    <section class="hp-room-section">
+        <div class="container-fluid">
+            <div class="hp-room-items">
+                <div class="row">
+                <% for a in 0..3 %>             
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg" data-setbg="<%= @query[a][9] %>">
+                            <div class="hr-text">
+                                <h3><%= @query[a][8] %></h3>
+                                <h2><%= @query[a][2] %>$<span>/Bir Gece</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Boyut:</td>
+                                            <td><%= @query[a][3] %> m²</td>                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Kapasite:</td>
+                                            <td>Max Kişi <%= @query[a][4] %></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Servisler:</td>
+                                            <td><%= @query[a][5] %></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="/detail/<%=@query[a][0] %>" class="primary-btn">DAHA FAZLA DETAY</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% end %>                 
+    </section>
+    <!-- Home Room Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Müşterilerimiz Neler Diyor?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="ts-item">
+                            <p>Personeli cok yardimsever,guvenilir,temiz ve hijyen acisindan mukkemmel bir hotel,herkeze tavsiye ederiz.
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5> - Çağatay ÇÜRÜK</h5>
+                            </div>
+                            <img src="stylesheets/img/testimonial-logo.png" alt="">
+                        </div>
+                        <div class="ts-item">
+                            <p>Otel girişinde samimi bir karşılama ile check in yaptık. Odamız temiz ve güzeldi. Aynı zamanda havuz da temizliği ile dikkat çekiyordu. Plaja yürüyüş mesafesi...
+                            </p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <h5> - Çağatay ÇÜRÜK</h5>
+                            </div>
+                            <img src="stylesheets/img/testimonial-logo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ft-about">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="stylesheets/img/footer-logo.png" alt="">
+                                </a>
+                            </div>
+                            <p>Binlerce Yolcuya Yol Gösteriyoruz</p>
+                            <div class="fa-social">
+                                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.tripadvisor.com"‎><i class="fa fa-tripadvisor"></i></a>
+                                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-contact">
+                            <h6>İletişime Geç</h6>
+                            <ul>
+                                <li>(+90) 555 555 5555</li>
+                                <li>cagatay135gmail.com</li>
+                                <li>Akyazı Mahallesi Fatih Caddesi 9973 Beşiktaş / İstanbul </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-newslatter">
+                            <h6>Yeni Haberler</h6>
+                            <p>Yeni Haberleri Almak İçin</p>
+                            <form action="#" class="fn-form">
+                                <input type="text" placeholder="Email">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul>
+                            <li><a href="#">İletişim</a></li>
+                            <li><a href="#">Şartlar</a></li>
+                            <li><a href="#">Gizlilik</a></li>
+                            <li><a href="#">Politikalarımız</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="co-text"><p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Tüm Hakları Saklıdır <br>  <a href="#" target="_blank">Çağatay</a> <i class="fa fa-heart" aria-hidden="true"></i> Tarafından</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form" action="/rightsearch" method="post">
+                <input type="text" name="ad" id="search-input" placeholder="Ara...">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="stylesheets/js/jquery-3.3.1.min.js"></script>
+    <script src="stylesheets/js/bootstrap.min.js"></script>
+    <script src="stylesheets/js/jquery.magnific-popup.min.js"></script>
+    <script src="stylesheets/js/jquery.nice-select.min.js"></script>
+    <script src="stylesheets/js/jquery-ui.min.js"></script>
+    <script src="stylesheets/js/jquery.slicknav.js"></script>
+    <script src="stylesheets/js/owl.carousel.min.js"></script>
+    <script src="stylesheets/js/main.js"></script>
+</body>
+
+</html>
